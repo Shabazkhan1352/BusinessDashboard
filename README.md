@@ -153,8 +153,13 @@ model Order {
 
 Make sure you have installed:
 - **Node.js** (v18 or higher)
+- **pnpm** (v8 or higher)
 - **PostgreSQL** (local or cloud)
-- **npm** or **yarn**
+
+**Install pnpm globally** (if not already installed):
+```bash
+npm install -g pnpm
+```
 
 ---
 
@@ -170,7 +175,7 @@ cd business-dashboard
 ### **3️⃣ Install Dependencies**
 
 ```bash
-npm install
+pnpm install
 ```
 
 ---
@@ -205,14 +210,14 @@ GROQ_API_KEY="your_groq_api_key_here"
 Initialize and migrate database:
 
 ```bash
-npx prisma migrate dev --name init
-npx prisma generate
+pnpx prisma migrate dev --name init
+pnpx prisma generate
 ```
 
 Seed database (optional):
 
 ```bash
-npx prisma db seed
+pnpx prisma db seed
 ```
 
 ---
@@ -220,7 +225,7 @@ npx prisma db seed
 ### **6️⃣ Run Development Server**
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 App will run on:
@@ -234,13 +239,16 @@ http://localhost:3000
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm start` | Start production server |
-| `npx prisma studio` | Open Prisma Studio (database GUI) |
-| `npx prisma migrate dev` | Create new migration |
-| `npx prisma generate` | Generate Prisma Client |
-| `npx prisma migrate reset` | Reset database |
+| `pnpm install` | Install all dependencies |
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production |
+| `pnpm start` | Start production server |
+| `pnpm lint` | Run ESLint |
+| `pnpx prisma studio` | Open Prisma Studio (database GUI) |
+| `pnpx prisma migrate dev` | Create new migration |
+| `pnpx prisma generate` | Generate Prisma Client |
+| `pnpx prisma migrate reset` | Reset database |
+| `pnpx prisma db seed` | Seed database with sample data |
 
 ---
 
@@ -292,8 +300,14 @@ Click **"Generate Insights"** on dashboard:
 ### Deploy to Vercel
 
 ```bash
-npm run build
+pnpm build
 vercel --prod
+```
+
+Or use Vercel CLI with pnpm:
+```bash
+pnpm install -g vercel
+vercel
 ```
 
 ### Database Options
@@ -306,6 +320,7 @@ vercel --prod
 ## 🎯 Why This Project Matters
 
 ✅ Uses **industry-standard tools** (Next.js, PostgreSQL, Prisma)  
+✅ Uses **pnpm** for faster, more efficient package management  
 ✅ Demonstrates **real business logic** and workflows  
 ✅ Shows **AI integration** in a meaningful way  
 ✅ Implements **authentication & authorization**  
@@ -331,7 +346,7 @@ vercel --prod
 Full Stack Developer | Learning Agentic AI 🚀  
 Passionate about building scalable and intelligent web applications
 
-[GitHub](https://github.com/shabaz) | [LinkedIn](https://linkedin.com/in/shabaz) | [Portfolio](https://shabaz.dev)
+[GitHub](https://github.com/ShabazKhan1352) | [LinkedIn](https://linkedin.com/in/shabaz) | [Portfolio](https://shabaz.dev)
 
 ---
 
