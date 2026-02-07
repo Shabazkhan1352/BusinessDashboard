@@ -1,11 +1,5 @@
-import React from 'react'
+import { redirect } from "next/navigation";
 
-const page = () => {
-  return (
-    <div className=' text-5xl text-black bg-white justify-center items-center flex h-screen'>
-      Welcome to the Home Page
-    </div>
-  )
+export default function HomePage() {
+  redirect("/login");
 }
-
-export default page
