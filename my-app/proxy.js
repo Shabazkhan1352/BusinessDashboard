@@ -1,0 +1,21 @@
+import { NextResponse } from "next/server";
+
+const proxy = (request) => {
+  const token = request.cookies.get("token")?.value;
+
+  if (request.nextUrl.pathname.startsWith("/dashboard") && !token) {
+    return NextResponse.redirect(new URL("/login", request.url));
+  }
+
+  if (request.nextUrl.pathname === "/login" && token) {
+    return NextResponse.redirect(new URL("/dashboard", request.url));
+  }
+
+  return NextResponse.next();
+};
+
+export default proxy;
+
+export const config = {
+  matcher: ["/dashboard/:path*", "/login"],
+};
