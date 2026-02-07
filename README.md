@@ -60,7 +60,7 @@ business-dashboard/
 ├── app/
 │   ├── (auth)/
 │   │   └── login/
-│   │       └── page.jsx
+│   │       └── page.jsx 
 │   │
 │   ├── dashboard/
 │   │   ├── page.jsx
